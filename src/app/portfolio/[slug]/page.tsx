@@ -105,6 +105,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 alt={`${project.title} detail`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           ))}

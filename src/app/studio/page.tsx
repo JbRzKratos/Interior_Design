@@ -23,6 +23,7 @@ export default function StudioPage() {
             alt="Studio workspace"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 500px"
           />
           <div className="absolute inset-0 blueprint-grid opacity-30 mix-blend-multiply pointer-events-none" />
         </div>
@@ -73,6 +74,7 @@ export default function StudioPage() {
                   alt={member.name}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div>

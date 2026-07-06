@@ -65,6 +65,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         alt="After"
         fill
         className="object-cover"
+        sizes="(max-width: 1024px) 100vw, 80vw"
       />
       <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 font-mono text-[10px] tracking-widest uppercase rounded">
         After
@@ -80,6 +81,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           alt="Before"
           fill
           className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 80vw"
         />
         <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 font-mono text-[10px] tracking-widest uppercase rounded">
           Before
