@@ -19,7 +19,7 @@ export function Badge({ children, variant = "category", className }: BadgeProps)
   return (
     <span
       className={cn(
-        "inline-block font-mono text-[10px] tracking-widest uppercase leading-none px-3 py-1.5 border",
+        "inline-block w-fit font-mono text-[10px] tracking-widest uppercase leading-none px-3 py-1.5 border",
         variantStyles[variant],
         className
       )}

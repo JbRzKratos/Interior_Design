@@ -112,8 +112,8 @@ export default function ServicesPage() {
               { num: "04", title: "Execution", desc: "Overseeing construction, managing procurement, and executing the final white-glove installation." }
             ].map((step) => (
               <div key={step.num} className="relative z-10 flex flex-col gap-6">
-                <div className="w-12 h-12 rounded-full bg-[var(--color-paper)] border border-[var(--color-blueprint-line)] flex items-center justify-center">
-                  <Badge variant="category">{step.num}</Badge>
+                <div className="w-12 h-12 rounded-full bg-[var(--color-paper)] border border-[var(--color-blueprint-line)] flex items-center justify-center font-mono text-[10px] tracking-widest text-[var(--color-blueprint-line)]">
+                  {step.num}
                 </div>
                 <h3 className="font-display text-2xl uppercase tracking-tight">{step.title}</h3>
                 <p className="font-sans text-sm text-[var(--color-ink)]/70 leading-relaxed">

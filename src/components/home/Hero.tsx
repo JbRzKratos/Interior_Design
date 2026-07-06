@@ -25,7 +25,7 @@ export function Hero() {
         style={{ y: y1, scale }}
       >
         <SketchToReality 
-          imageSrc="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2500&auto=format&fit=crop"
+          imageSrc="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2500&auto=format&fit=crop"
           imageAlt="The Living Blueprint signature style"
           className="w-full h-full"
           aspectRatio="video" // Custom override to fill

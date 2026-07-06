@@ -21,7 +21,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Progress of current page
+  // Progress of current page scroll
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -48,6 +48,7 @@ export function Navbar() {
 
   return (
     <>
+      {/* DESKTOP/MOBILE HEADER WITH MIX-BLEND-DIFFERENCE */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference text-[var(--color-paper)] pointer-events-none">
         <div className="site-container h-24 flex items-center justify-between pointer-events-auto">
           {/* Logo / Title */}
@@ -103,7 +104,7 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Full-Screen Sheet */}
+      {/* MOBILE FULL-SCREEN SHEET */}
       <div 
         className={cn(
           "fixed inset-0 z-[100] bg-[var(--color-blueprint-navy)] text-[var(--color-paper)] transition-transform duration-500 ease-in-out md:hidden flex flex-col",
