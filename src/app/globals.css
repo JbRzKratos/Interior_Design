@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F4EF;
+  --color-ink: #1A1A18;
+  --color-blueprint-navy: #0E1B2E;
+  --color-blueprint-line: #7FB8D9;
+  --color-walnut: #8B5E3C;
+  --color-linen: #E8DFD3;
+  --color-sand: #C9A87C;
+
+  --font-display: var(--font-fraunces), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-paper);
+    --foreground: var(--color-ink);
+  }
+
+  .dark {
+    --background: var(--color-blueprint-navy);
+    --foreground: var(--color-paper);
+  }
+
+  * {
+    border-color: var(--color-blueprint-line);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .blueprint-grid {
+    background-image: 
+      linear-gradient(to right, color-mix(in srgb, var(--color-blueprint-line) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-blueprint-line) 6%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center top;
+  }
+  
+  .blueprint-grid-dark {
+    background-image: 
+      linear-gradient(to right, color-mix(in srgb, var(--color-paper) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-paper) 6%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center top;
+  }
+
+  /* Dimension ticks divider */
+  .dimension-tick {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .dimension-tick::before, .dimension-tick::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-blueprint-line);
+  }
+  .dimension-tick::before {
+    margin-right: 1rem;
+  }
+  .dimension-tick::after {
+    margin-left: 1rem;
+  }
+
+  /* Shared layout utilities */
+  .site-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;   /* px-6 */
+    padding-right: 1.5rem;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .site-container {
+      padding-left: 2.5rem;  /* md:px-10 */
+      padding-right: 2.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-container {
+      padding-left: 4rem;    /* lg:px-16 */
+      padding-right: 4rem;
+    }
+  }
+
+  .site-section {
+    padding-top: 4rem;       /* py-16 */
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 768px) {
+    .site-section {
+      padding-top: 6rem;     /* md:py-24 */
+      padding-bottom: 6rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-section {
+      padding-top: 8rem;     /* lg:py-32 */
+      padding-bottom: 8rem;
+    }
+  }
+
+  .site-section-sm {
+    padding-top: 2rem;       /* py-8 */
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 768px) {
+    .site-section-sm {
+      padding-top: 3rem;     /* md:py-12 */
+      padding-bottom: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-section-sm {
+      padding-top: 4rem;     /* lg:py-16 */
+      padding-bottom: 4rem;
+    }
+  }
+}
